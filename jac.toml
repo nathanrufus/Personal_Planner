@@ -22,6 +22,7 @@ typescript = "^5.3.3"
 "@types/react" = "^19.2.0"
 "@types/react-dom" = "^19.2.0"
 tailwindcss = "latest"
+"@tailwindcss/vite" = "latest"
 
 
 
@@ -29,3 +30,6 @@ tailwindcss = "latest"
 watchdog = ">=3.0.0"
 
 [client]
+[client.vite]
+plugins = ["tailwindcss()"]
+lib_imports = ["import tailwindcss from '@tailwindcss/vite'"]

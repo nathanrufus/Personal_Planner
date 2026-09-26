@@ -86,3 +86,15 @@ walker:pub UpdateStatus {
         }
     }
 }
+walker:pub ListCourses {
+    """Report every course."""
+    has reports: list[Course] = [];
+
+    can collect with Root entry {
+        visit [-->][?:Course];
+    }
+
+    can gather with Course entry {
+        report here;
+    }
+}
